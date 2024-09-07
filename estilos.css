@@ -503,6 +503,10 @@ header .menu-btn {
     border: 1px solid var(--color-content-basic-interest);
     border-radius: 14px;
     border-image-width: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 .basics-list #icons {
     position: relative;
@@ -548,6 +552,10 @@ header .menu-btn {
     border: 1px solid var(--color-content-basic-interest);
     border-radius: 14px;
     border-image-width: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 .interest-list > span {
     border-image-width: 0;
@@ -585,6 +593,10 @@ header .menu-btn {
     border: 1px solid var(--color-content-basic-interest);
     border-radius: 14px;
     border-image-width: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 .food-list #food-icons {
     position: relative;
