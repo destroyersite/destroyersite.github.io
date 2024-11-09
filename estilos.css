@@ -54,7 +54,7 @@ body {
     text-size-adjust: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    -webkit-tap-highlight-color: ;
+    -webkit-tap-highlight-color: transparent;
     ::selection {
         background-color: rgba(0, 115, 255, 0.376);
         color: white;
