@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <!--  METADATOS BÁSICOS DE LA PÁGINA  -->
-        <title lang="x-notranslate">DESTROYER &#124; REDES SOCIALES</title>
+        <title lang="x-notranslate">Mantenimiento :(</title>
         <link rel="canonical" href="https://destroyersite.github.io/">
         <meta name="description" content="😏">
         <meta name="keywords" content="X, Instagram, Facebook, Threads, RoyeR">
@@ -79,12 +79,11 @@
         <meta http-equiv="X-Content-Type-Options" content="nosniff">
         <meta http-equiv="X-Frame-Options" content="DENY">
         <meta http-equiv="X-XSS-Protection" content="1; mode=block">
-    </head>
-    
+    <!--</head>
     <body>
         <header>
             <a class="box-logo" href="#" title="Recargar sitio web - DESTROYER">
-               <!-- <svg id="svg-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0%" y="0%" width="100%" height="100%" viewBox="0 0 14.0 24.0" enable-background="new 0 0 14.0 24.0" xml:space="preserve"><path fill="#FFFFFF" stroke="#FFFFFF" fill-opacity="1.000" stroke-opacity="1.000" fill-rule="nonzero" stroke-width="0.56" stroke-linejoin="round" stroke-linecap="square" d="M6.59,10.40L6.59,0.80L13.18,13.60L7.41,13.60L7.41,23.20L0.82,10.40z"/></svg>-->
+               <!-- <svg id="svg-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0%" y="0%" width="100%" height="100%" viewBox="0 0 14.0 24.0" enable-background="new 0 0 14.0 24.0" xml:space="preserve"><path fill="#FFFFFF" stroke="#FFFFFF" fill-opacity="1.000" stroke-opacity="1.000" fill-rule="nonzero" stroke-width="0.56" stroke-linejoin="round" stroke-linecap="square" d="M6.59,10.40L6.59,0.80L13.18,13.60L7.41,13.60L7.41,23.20L0.82,10.40z"/></svg>
                 <h2 class="name-logo" translate="no">DESTROYER</h2>
             </a>
             <div class="menu-btn">
@@ -501,4 +500,124 @@ menuItem.forEach (function(menuItem) {
     });
 </script>
     </body>
+</html>-->
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            min-height: 100%;
+            margin: 0;
+            background-color: blue;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            font-family: "Work Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        .game-container {
+            width: 100vw;
+            height: 100svh;
+            position: relative;
+            user-select: none;
+        }
+
+        .maintenance-text {
+            font-size: 18px;
+            color: #f5f5f7;
+            font-weight: 500;
+            position: absolute;
+            color: white;
+            line-height: 0.9;
+            white-space: nowrap;
+            letter-spacing: -0.0175rem;
+        }
+        
+        p {
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 14px;
+            color: red;
+            font-weight: 600;
+            background: transparent;
+            /*background-color: rgba(22, 22, 23, 0.7);*/
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 4px 11px 5px 11px;
+            border-radius: 13px;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <div class="maintenance-text">Mantenimiento :(</div>
+    </div>
+    <p>By: RoyeR</p>
+    <script>
+        const textElement = document.querySelector('.maintenance-text');
+        const gameContainer = document.querySelector('.game-container');
+    
+        // Ocultar el texto al inicio para evitar parpadeo
+        textElement.style.visibility = "hidden";
+    
+        function getContainerSize() {
+            return {
+                width: gameContainer.clientWidth,
+                height: gameContainer.clientHeight
+            };
+        }
+    
+        let xSpeed = 1;
+        let ySpeed = 1;
+        let xPos, yPos;
+    
+        function moveText() {
+            const { width, height } = getContainerSize();
+    
+            xPos += xSpeed;
+            yPos += ySpeed;
+    
+            if (xPos + textElement.offsetWidth >= width || xPos <= 0) {
+                xSpeed = -xSpeed;
+            }
+            if (yPos + textElement.offsetHeight >= height || yPos <= 0) {
+                ySpeed = -ySpeed;
+            }
+    
+            textElement.style.left = `${xPos}px`;
+            textElement.style.top = `${yPos}px`;
+    
+            requestAnimationFrame(moveText);
+        }
+    
+        window.onload = () => {
+            const { width, height } = getContainerSize();
+    
+            // Generar posición inicial aleatoria dentro de los límites del contenedor
+            xPos = Math.random() * (width - textElement.offsetWidth);
+            yPos = Math.random() * (height - textElement.offsetHeight);
+    
+            // Aplicar posición inicial sin parpadeo
+            textElement.style.left = `${xPos}px`;
+            textElement.style.top = `${yPos}px`;
+    
+            // Mostrar el texto después de definir su posición
+            textElement.style.visibility = "visible";
+    
+            moveText();
+        };
+    </script>
+</body>
 </html>
