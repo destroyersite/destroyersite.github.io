@@ -545,22 +545,27 @@ menuItem.forEach (function(menuItem) {
         
         p {
             position: fixed;
-            bottom: 20px;
+            bottom: 22px;
             left: 50%;
             transform: translateX(-50%);
-            font-size: 14px;
+            font-size: 15px;
             color: red;
             font-weight: 600;
-            background: transparent;
+            background: green;
             /*background-color: rgba(22, 22, 23, 0.7);*/
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             padding: 4px 11px 5px 11px;
-            border-radius: 13px;
+            border-radius: 13px 13px 0 0;
         }
 	.fecha {
 	    bottom: 0px;
 	    color: white;
+	    font-size: 15.600px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 0px;
+            border-bottom-left-radius: 0px;
 	}
     </style>
 </head>
