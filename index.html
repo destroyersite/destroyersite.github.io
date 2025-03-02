@@ -560,7 +560,7 @@ menuItem.forEach (function(menuItem) {
         }
 	.fecha {
 	    bottom: 0px;
-	    color: white;
+	    color: #f5f5f7;
 	    font-size: 15.600px;
 	}
     </style>
@@ -631,7 +631,9 @@ menuItem.forEach (function(menuItem) {
             const countdownElement = document.getElementById('countdown');
     
             // Fecha fija de lanzamiento (27 de marzo de 2025 a las 00:00:00)
-            const launchDate = new Date('2025-03-27T00:00:00');
+            // const launchDate = new Date('2025-03-27T00:00:00');
+	    // const launchDate = new Date('2025-03-28T03:00:00Z');
+	    const launchDate = new Date('2025-03-24T15:00:00Z'); // 24 de marzo a las 12:00 GMT-3 (15:00 UTC)
     
             // Intervalo para actualizar el contador cada segundo
             const interval = setInterval(() => {
