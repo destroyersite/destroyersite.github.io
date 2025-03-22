@@ -660,5 +660,25 @@ menuItem.forEach (function(menuItem) {
         // Iniciar el contado
 	updateCountdown();
     </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Definir la fecha y hora de redirección (25 de marzo de 2025 a las 13:00)
+            const fechaProgramada = new Date("2025-03-25T13:00:00"); // Usa el formato ISO (local)
+            const fechaActual = new Date(); // Obtiene la fecha y hora actual
+
+            // Si la fecha actual es mayor o igual a la programada, redirecciona
+            if (fechaActual >= fechaProgramada) {
+                window.location.href = "https://royersite.github.io";
+            } else {
+                console.log("Aún no es la hora de redirección.");
+
+                // Opcional: Calcular el tiempo restante para redireccionar automáticamente
+                const tiempoRestante = fechaProgramada - fechaActual;
+                setTimeout(() => {
+                    window.location.href = "https://royersite.github.io";
+                }, tiempoRestante);
+            }
+        });
+    </script>
 </body>
 </html>
