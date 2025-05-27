@@ -716,9 +716,9 @@ updateCountdown();😄✅ */
         }
 
         // Iniciar el contado
-	updateCountdown();*/
-    </script>
-    <script>/*
+	updateCountdown();
+    </script>*/
+    /*<script>
     document.addEventListener("DOMContentLoaded", function () {
         // Definir la fecha y hora de redirección (29 de marzo de 2025 a las 11:00 AM GMT-3, que es 2:00 PM UTC)
         const fechaProgramada = new Date("2025-03-29T14:00:00Z"); // 29 de marzo de 2025 a las 2:00 PM UTC
@@ -736,7 +736,29 @@ updateCountdown();😄✅ */
                 window.location.href = "https://destroyersite.github.io";
             }, tiempoRestante);
         }
-    });✅*/
+    });
+</script>*/
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    // Fecha y hora programada: sábado 31 de mayo de 2025 a las 11:00 AM GMT-3 (14:00 UTC)
+    const fechaProgramada = new Date("2025-05-31T14:00:00Z"); // 14:00 UTC
+
+    const fechaActual = new Date(); // Fecha y hora actuales
+
+    if (fechaActual >= fechaProgramada) {
+        // Si ya pasó la fecha, redirige inmediatamente
+        window.location.href = "https://royersite.github.io/";
+    } else {
+        console.log("Aún no es la hora de redirección.");
+        
+        // Calcula cuánto falta y redirige automáticamente cuando llegue el momento
+        const tiempoRestante = fechaProgramada - fechaActual;
+        setTimeout(() => {
+            window.location.href = "https://royersite.github.io/";
+        }, tiempoRestante);
+    }
+});
 </script>
 </body>
 </html>
