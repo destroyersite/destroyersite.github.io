@@ -501,22 +501,6 @@ menuItem.forEach (function(menuItem) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100..900&display=swap" rel="stylesheet">
-    <script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "headline": "RoyeR",
-    "description": "Este es mi sitio web cuenta con mis redes sociales.",
-    "author": {
-        "@type": "Person",
-        "name": "RoyeR"
-    },
-    "mainEntityOfPage": {
-        "@type": "WebSite",
-        "@id": "https://destroyersite.github.io/"
-    }
-}
-    </script>
     <style>
         * {
             margin: 0;
@@ -560,9 +544,10 @@ menuItem.forEach (function(menuItem) {
             transform: translateX(-50%);
             bottom: 3px;
             width: 100%;
-            text-align: center;
             display: flex;
             flex-direction: column;
+            justify-content: center;
+            align-items: center;
             gap: 2px;
         }
         .by {
@@ -578,6 +563,7 @@ menuItem.forEach (function(menuItem) {
             font-weight: 600;
             background: red;
             width: fit-content;
+            font-feature-settings: "tnum" 1;
         	}
     </style>
 </head>
