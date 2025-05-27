@@ -469,7 +469,14 @@ menuItem.forEach (function(menuItem) {
             white-space: nowrap;
             letter-spacing: -0.0175rem;
         }
-        
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
         .footer-text {
             position: fixed;
             left: 50%;
@@ -480,23 +487,26 @@ menuItem.forEach (function(menuItem) {
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            opacity: 0;
+            animation: fadeIn 1000ms ease-in forwards;
+            animation-delay: 2000ms;
         }
         .by {
             color: #0eedfc;
             font-size: 15px;
             font-weight: 600;
-            background: red;
+            background: blue;
             width: fit-content;
-            padding: 0 1px 1px 1px;
+            padding: 0 2px 1px 2px;
         }
 	       .fecha {
 	           color: #f5f5f7;
 	           font-size: 15.600px;
             font-weight: 600;
-            background: red;
+            background: blue;
             width: fit-content;
             font-feature-settings: "tnum" 1;
-            padding: 0 1px 1px 1px;
+            padding: 0 2px 1.5px 2px;
         	}
     </style>
 </head>
