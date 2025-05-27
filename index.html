@@ -554,32 +554,35 @@ menuItem.forEach (function(menuItem) {
             letter-spacing: -0.0175rem;
         }
         
-        p {
+        .footer-text {
             position: fixed;
-            bottom: 22px;
             left: 50%;
             transform: translateX(-50%);
-            font-size: 15px;
+            bottom: 3px;
+            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+        .by {
             color: #0eedfc;
-            font-weight: 600;
-            background: blue;
-            padding: 4px 10px 5px 10px;
-            border-radius: 13px 13px 0 0;
+            font-size: 15px;
         }
 	       .fecha {
-	           bottom: 0px;
 	           color: #f5f5f7;
 	           font-size: 15.600px;
-            font-feature-settings: "tnum" 1;
         	}
     </style>
 </head>
 <body>
-        <div class="game-container">
+    <div class="game-container">
         <div class="maintenance-text">Mantenimiento :(</div>
     </div>
-    <p>By: RoyeR</p>
-    <p class="fecha" id="countdown" role="timer" aria-live="polite"></p>
+    <div class="footer-text">
+        <p class="by">By: RoyeR</p>
+        <p class="fecha" id="countdown" role="timer" aria-live="polite"></p>
+    </div>
 
     <script>
         const textElement = document.querySelector('.maintenance-text');
