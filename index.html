@@ -590,14 +590,12 @@ menuItem.forEach (function(menuItem) {
     </style>
 </head>
 <body>
-        <h1 style="opacity: 0; font-size: 1px; margin: 1px; padding: 1px; color: blue; border: none; user-select: none;">RoyeR</h1>
-    <div class="game-container">
+        <div class="game-container">
         <div class="maintenance-text">Mantenimiento :(</div>
     </div>
-    <h1 class="title">RoyeR</h1>
     <p>By: RoyeR</p>
-    <p class="fecha" id="countdown"></p>
-    <!--<p class="fecha" id="countdown"></p>-->
+    <p class="fecha" id="countdown" role="timer" aria-live="polite"></p>
+
     <script>
         const textElement = document.querySelector('.maintenance-text');
         const gameContainer = document.querySelector('.game-container');
