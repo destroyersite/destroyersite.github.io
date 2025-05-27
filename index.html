@@ -650,96 +650,65 @@ menuItem.forEach (function(menuItem) {
             textElement.style.visibility = "visible";
     
             moveText();
-        }; /*
-
-function updateCountdown() {
-    const countdownElement = document.getElementById('countdown');
-    
-    // Fecha fija de lanzamiento (29 de marzo de 2025 a las 11:00 AM GMT-3, que es 2:00 PM UTC)
-    const launchDate = new Date('2025-03-29T14:00:00Z'); // 29 de marzo de 2025 a las 2:00 PM UTC
-    
-    // Intervalo para actualizar el contador cada segundo
-    const interval = setInterval(() => {
-        const now = new Date().getTime();
-        const distance = launchDate - now;
-    
-        // Cálculos para días, horas, minutos y segundos
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-        // Mostrar el resultado en el elemento span
-        countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-    
-        // Si el contador llega a cero, detener el intervalo
-        if (distance < 0) {
-            clearInterval(interval);
-            countdownElement.innerHTML = '¡El sitio web ya está disponible!';
-        }
-    }, 1000);
-}
-
-// Iniciar el contado
-updateCountdown();😄✅ */
+        };
+</script>
 
 
 
-	/* function updateCountdown() {
+
+
+
+<script>
+        function updateCountdown() {
             const countdownElement = document.getElementById('countdown');
-    
-            // Fecha fija de lanzamiento (27 de marzo de 2025 a las 00:00:00)
-            // const launchDate = new Date('2025-03-27T00:00:00');
-	    // const launchDate = new Date('2025-03-28T03:00:00Z');
-	    const launchDate = new Date('2025-03-24T15:00:00Z'); // 24 de marzo a las 12:00 GMT-3 (15:00 UTC)
-    
-            // Intervalo para actualizar el contador cada segundo
+            const launchDate = new Date('2025-05-31T14:00:00Z');
+            const now = new Date().getTime();
+            const distance = launchDate - now;
+
+            // Si la fecha ya pasó, mostrar mensaje y redirigir
+            if (distance <= 0) {
+                countdownElement.innerHTML = '¡El sitio web ya está disponible!';
+                countdownElement.style.transition = 'opacity 1s';
+                countdownElement.style.opacity = '0';
+                setTimeout(() => {
+                    window.location.href = "https://royersite.github.io/";
+                }, 1000);
+                return;
+            }
+
+            // Actualizar el contador cada segundo
             const interval = setInterval(() => {
                 const now = new Date().getTime();
                 const distance = launchDate - now;
-        
-                // Cálculos para días, horas, minutos y segundos
+
+                if (distance <= 0) {
+                    clearInterval(interval);
+                    countdownElement.innerHTML = '¡El sitio web ya está disponible!';
+                    countdownElement.style.transition = 'opacity 1s';
+                    countdownElement.style.opacity = '0';
+                    setTimeout(() => {
+                        window.location.href = "https://royersite.github.io/";
+                    }, 1000);
+                    return;
+                }
+
                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        
-                // Mostrar el resultado en el elemento span
-                countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-        
-                // Si el contador llega a cero, detener el intervalo
-                if (distance < 0) {
-                    clearInterval(interval);
-                    countdownElement.innerHTML = '¡El sitio web ya está disponible!';
-                }
+
+                countdownElement.innerHTML = `
+                    <div>${days} <span>Días</span></div>
+                    <div>${hours} <span>Horas</span></div>
+                    <div>${minutes} <span>Minutos</span></div>
+                    <div>${seconds} <span>Segundos</span></div>
+                `;
             }, 1000);
         }
 
-        // Iniciar el contado
-	updateCountdown();
-    */
-   
+        // Iniciar el contador cuando el DOM esté cargado
+        document.addEventListener("DOMContentLoaded", updateCountdown);
+    </script>
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    // Fecha y hora programada: sábado 31 de mayo de 2025 a las 11:00 AM GMT-3 (14:00 UTC)
-    const fechaProgramada = new Date("2025-05-31T14:00:00Z"); // 14:00 UTC
-
-    const fechaActual = new Date(); // Fecha y hora actuales
-
-    if (fechaActual >= fechaProgramada) {
-        // Si ya pasó la fecha, redirige inmediatamente
-        window.location.href = "https://royersite.github.io/";
-    } else {
-        console.log("Aún no es la hora de redirección.");
-        
-        // Calcula cuánto falta y redirige automáticamente cuando llegue el momento
-        const tiempoRestante = fechaProgramada - fechaActual;
-        setTimeout(() => {
-            window.location.href = "https://royersite.github.io/";
-        }, tiempoRestante);
-    }
-});
-</script>
 </body>
 </html>
