@@ -425,75 +425,7 @@ menuItem.forEach (function(menuItem) {
             document.querySelector(".copyright").textContent = copyright;
         </script>
 
-    <script>
-    var userAgent = navigator.userAgent.toLowerCase();
-    var isAndroid = userAgent.indexOf("android") > -1;
-    var isiOS = /(ipad|iphone|ipod)/gi.test(userAgent);
-    
-    if (isiOS) {
-        window.location.href = "ios.html"; // Página de error para dispositivos iOS
-    }
-</script>
-<script>
-        const messages = [
-            { text: 'Bienvenido', lang: 'es' },  // Español
-            { text: 'Welcome', lang: 'en' },     // Inglés
-            { text: 'Bienvenue', lang: 'fr' },   // Francés
-            { text: 'Willkommen', lang: 'de' },  // Alemán
-            { text: 'Bem-vindo', lang: 'pt' },   // Portugués
-            { text: 'Tapeg̃uahẽporãite', lang: 'gn' }        // Guaraní
-        ];
-
-        const welcomeElement = document.getElementById('welcome-message');
-        let currentIndex = 0;
-
-        function changeMessage() {
-            welcomeElement.style.opacity = 0;  // Desaparece el mensaje actual
-            setTimeout(() => {
-                const message = messages[currentIndex];
-                welcomeElement.textContent = message.text;  // Cambia el mensaje
-                welcomeElement.setAttribute('lang', message.lang); // Cambia el atributo lang
-                welcomeElement.style.opacity = 1;  // Aparece el nuevo mensaje
-                currentIndex = (currentIndex + 1) % messages.length;  // Avanza al siguiente mensaje
-            }, 500); // Tiempo para esperar a que el mensaje se desvanezca
-        }
-
-        setInterval(changeMessage, 2600); // Cambia el mensaje cada 2.7 segundos
-    </script>
-
-  
-<script>
-    document.querySelectorAll('.platform-link').forEach(function(link) {
-        link.addEventListener('click', function(event) {
-            event.preventDefault();
-            
-            const platform = this.getAttribute('data-platform');
-            const appLinks = {
-                instagram: 'instagram://user?username=royer.ai',
-                //facebook: 'fb://profile/royerromeronomas',
-                twitter: 'twitter://user?screen_name=royernomas',
-                //threads: 'threads://user?username=royer.ai'
-            };
-            const webLinks = {
-                instagram: 'https://www.instagram.com/royer.ai/',
-                //facebook: 'https://www.facebook.com/royerromeronomas',
-                twitter: 'https://x.com/royernomas',
-                //threads: 'https://www.threads.net/@royer.ai'
-            };
-
-            const appLink = appLinks[platform];
-            const webLink = webLinks[platform];
-
-            
-            window.location.href = appLink;
-
-            
-            setTimeout(function() {
-                window.location.href = webLink;
-            }, 500); // 500 ms de retraso
-        });
-    });
-</script>
+   
     </body>
 </html>-->
 
@@ -542,13 +474,12 @@ menuItem.forEach (function(menuItem) {
             position: fixed;
             left: 50%;
             transform: translateX(-50%);
-            bottom: 3px;
+            bottom: 0;
             width: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap: 2px;
         }
         .by {
             color: #0eedfc;
@@ -556,6 +487,7 @@ menuItem.forEach (function(menuItem) {
             font-weight: 600;
             background: red;
             width: fit-content;
+            padding: 0 1px 1px 1px;
         }
 	       .fecha {
 	           color: #f5f5f7;
@@ -564,6 +496,7 @@ menuItem.forEach (function(menuItem) {
             background: red;
             width: fit-content;
             font-feature-settings: "tnum" 1;
+            padding: 0 1px 1px 1px;
         	}
     </style>
 </head>
