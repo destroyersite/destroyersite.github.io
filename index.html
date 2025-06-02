@@ -449,13 +449,23 @@ menuItem.forEach (function(menuItem) {
             min-height: 100%;
             margin: 0;
             background-color: blue;
-            font-family: Arial, sans-serif;
+          
             overflow: hidden;
-            font-family: "Work Sans", sans-serif;
+            
             font-optical-sizing: auto;
             font-weight: 500;
             font-style: normal;
+
         }
+         body {
+  font-family:
+    "Work Sans",                 /* tu fuente principal */
+    "Apple Color Emoji",         /* emojis en iOS/macOS */
+    "Segoe UI Emoji",            /* emojis en Windows */
+    "Noto Color Emoji",          /* emojis en Android/Linux */
+    system-ui,
+    sans-serif;
+}
 
         .game-container {
             width: 100vw;
